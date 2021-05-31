@@ -1,0 +1,80 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 90vh;
+  background-color: $white-four;
+
+  &__logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 1.5rem;
+  }
+
+  &__titleContainer {
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0.8rem;
+    font-family: $fontmerriweather;
+    font-size: 20px;
+    color: $dull-orange;
+  }
+
+  &__paragraph {
+    font-size: 12.8px;
+    color: $dark-green-blue;
+    max-width: 270px;
+    line-height: 1.2rem;
+  }
+
+  &__picturesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid 2px rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+    width: 268px;
+    padding: 1rem;
+  }
+
+  &__pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  &__icon {
+    color: $dull-orange;
+    font-size: 22.4px;
+  }
+  &__words {
+    color: $gunmetal;
+    font-size: 12.8px;
+  }
+
+  &__button {
+    padding: 0.8rem 1rem;
+
+    border: solid 2px $dirty-blue;
+    border-radius: 2rem;
+    background-color: $dirty-blue;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  @media (max-height: 500px) and (orientation: landscape) {
+  }
+}

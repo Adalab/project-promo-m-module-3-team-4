@@ -1,0 +1,123 @@
+<fieldset class="fill">
+  <div class="fieldset__button">
+    <div class="fieldset__button--title">
+      <i class="far fa-keyboard"></i>
+      <h2>Rellena</h2>
+    </div>
+    <i class="fas fa-chevron-up arrowPointer js-fillButton"></i>
+  </div>
+
+  <div class="none js-fill fill__wrapper">
+    <div class="fill__contact">
+      <label class="fill__text" for="fullname"> Nombre completo </label>
+      <input
+        class="js_input fill__contact-name"
+        type="text"
+        id="fullname"
+        name="name"
+        placeholder="Ej: Sally Jill"
+      />
+      <p class="js-validationName validationMessage none">
+        El campo no se ha rellenado
+      </p>
+    </div>
+
+    <div class="fill__contact">
+      <label class="fill__text" for="role"> Puesto </label>
+      <input
+        class="js_input fill__contact-role"
+        type="text"
+        id="role"
+        name="job"
+        placeholder="Ej: Front- end unicorn"
+      />
+      <p class="js-validationJob validationMessage none">
+        El campo no se ha rellenado
+      </p>
+    </div>
+
+    <div class="fill__contact">
+      <label class="fill__text" for="photo"> Imagen del perfil </label>
+      <div class="js__profile-preview"></div>
+      <input
+        class="js_input fill__contact-image js__profile-upload-btn"
+        type="file"
+        id="photo"
+        name="photo"
+      />
+      <button class="js__profile-trigger">Añadir imagen</button>
+      <p class="js-validationPhoto validationMessage none">
+        No se ha adjuntado ningún archivo
+      </p>
+      <p class="js-validationPhotoTwo validationMessage none">
+        La extensión no es válida. Prueba con un archivo .jpg, .png, .jpeg,
+        .gif, .svg
+      </p>
+      <p class="js-validationPhotoThree validationMessage none">
+        El tamaño de la foto es excesivo. Prueba con un archivo de menos de 4 MG
+      </p>
+    </div>
+
+    <div class="fill__contact">
+      <label class="fill__text" for="email"> Email </label>
+      <input
+        class="js_input fill__contact-email"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ej: sally-hill@gmail.com"
+      />
+      <p class="js-validationEmail validationMessage none">
+        El campo no se ha rellenado o el formato es inválido
+      </p>
+    </div>
+
+    <div class="fill__contact">
+      <label class="fill__text" for="phone"> Teléfono </label>
+      <input
+        class="js_input fill__contact-phone"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Ej: 555-55-55-55"
+      />
+      <p class="js-validationPhone validationMessage none">
+        El campo no se ha rellenado o el formato es inválido
+      </p>
+    </div>
+
+    <div class="fill__contact">
+      <label class="fill__text" for="linkedin"> Linkedin </label>
+      <div class="fill__contactPrefix">
+        <p class="fill__contactParagraph">https://www.linkedin.com/in/</p>
+        <input
+          class="js_input fill__contact-linkedin"
+          type="url"
+          id="linkedin"
+          name="linkedin"
+          placeholder="Ej: salli.hill"
+        />
+      </div>
+      <p class="js-validationLinkedin validationMessage none">
+        El campo no se ha rellenado
+      </p>
+    </div>
+
+    <div class="fill__contact">
+      <label class="fill__text" for="github"> Github </label>
+      <div class="fill__contactPrefix fill__contactPrefixGithub">
+        <p class="fill__contactParagraph">https://github.com/</p>
+        <input
+          class="js_input fill__contact-github"
+          type="url"
+          id="github"
+          name="github"
+          placeholder="Ej: sally-hill"
+        />
+      </div>
+      <p class="js-validationGithub validationMessage none">
+        El campo no se ha rellenado
+      </p>
+    </div>
+  </div>
+</fieldset>
