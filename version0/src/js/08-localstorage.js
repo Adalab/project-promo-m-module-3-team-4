@@ -1,5 +1,6 @@
 let dataSave = [];
 dataSave = JSON.parse(localStorage.getItem("profile"));
+
 function printAfterReload() {
   if (dataSave !== null) {
     data = dataSave;

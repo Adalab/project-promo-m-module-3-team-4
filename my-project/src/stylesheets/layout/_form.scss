@@ -1,0 +1,306 @@
+.form {
+  color: $gunmetal;
+  @media (min-width: 768px) {
+    & {
+      width: 45%;
+    }
+  }
+  @media (min-width: 1024px) {
+    & {
+      width: 35%;
+    }
+  }
+
+  fieldset {
+    border-bottom: thin solid #ccc;
+  }
+
+  .fieldset__button {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 1rem 0;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &--title {
+      display: flex;
+      flex-flow: row wrap;
+
+      gap: 0.5rem;
+
+      .fa-object-ungroup,
+      .fa-keyboard,
+      .fa-share-alt {
+        color: $dull-orange;
+      }
+    }
+  }
+
+  .design__expand {
+    padding-top: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+
+    .colors__wrapper {
+      input {
+        margin: 0 0.8rem;
+      }
+
+      .label,
+      .palette__wrapper {
+        display: flex;
+        margin: 0.3rem 0;
+        align-items: center;
+
+        .color {
+          height: 25px;
+          width: 30px;
+        }
+
+        .palette1__color1 {
+          background: $dark-green-blue;
+        }
+        .palette1__color2 {
+          background: $dirty-blue;
+        }
+        .palette1__color3 {
+          background: $hospital-green;
+        }
+        .palette2__color1 {
+          background: $dried-blood;
+        }
+        .palette2__color2 {
+          background: $rusty-red;
+        }
+        .palette2__color3 {
+          background: $tomato;
+        }
+        .palette3__color1 {
+          background: $slate;
+        }
+        .palette3__color2 {
+          background: $faded-orange;
+        }
+        .palette3__color3 {
+          background: $light-grey-blue;
+        }
+      }
+    }
+  }
+
+  .share {
+    &__button {
+      background-color: $dull-orange;
+      border: none;
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 18px;
+      margin: 2rem 0;
+      padding: 0.6rem 2rem;
+      text-transform: uppercase;
+
+      &--twitter {
+        background-color: $azure;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        padding: 0.3rem 1.5rem;
+        margin: 2rem;
+      }
+    }
+
+    &__expand {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .card--created {
+      border-top: thin solid #ccc;
+      text-align: center;
+      width: 250px;
+      margin: 0 auto;
+      padding: 1rem 0;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.fill {
+  //   max-width: 400px;
+
+  //   margin: 457px 0 0;
+  //   padding: 27px 19px 30px 20px;
+  //   padding: 1rem;
+  //display: flex;
+  //flex-flow: column wrap;
+  // gap: 20px;
+
+  &__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-family: $fontopensans;
+    color: #114e4e;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: stretch;
+
+    &-name,
+    &-role,
+    &-image,
+    &-email,
+    &-phone,
+    &-linkedin,
+    &-github {
+      padding: 0.4rem;
+      border: solid 1px $hospital-green;
+    }
+    &-linkedin {
+      width: 100%;
+    }
+
+    &-github {
+      width: 100%;
+    }
+  }
+  ::placeholder {
+    color: $pinkish-grey;
+    font-size: 14px;
+    font-family: $fontopensans;
+  }
+  &__contactPrefix {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+  }
+  &__contactPrefixGithub {
+    margin-bottom: 30px;
+  }
+  &__contactParagraph {
+    align-self: center;
+  }
+  @media (min-width: 768px) {
+    &__contactPrefix {
+      font-size: 14px;
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+.arrowPointer {
+  transform: rotate(180deg);
+}
+.tooltipFill {
+  position: absolute;
+  left: 50px;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+  max-width: 200px;
+}
+.tooltipShare {
+  position: absolute;
+  left: 50px;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+  max-width: 200px;
+}
+.tooltipParagraph {
+  text-align: center;
+  color: white;
+  line-height: 1.5em;
+}
+.validationMessage {
+  max-width: 300px;
+  line-height: 1.5em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .tooltip {
+    left: 90px;
+    max-width: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .tooltip {
+    left: 90px;
+    max-width: 300px;
+  }
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+//JAVASCRIPT
+.fas_js {
+  transform: rotate(180deg);
+}
+
+.js__profile-preview {
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: solid 1px $hospital-green;
+  position: absolute;
+  margin-left: 11rem;
+  margin-top: 27px;
+}
+
+.js__profile-upload-btn {
+  position: absolute;
+  transform: translateY(23px);
+  opacity: 0;
+  z-index: 9;
+}
+
+.js__profile-trigger {
+  width: 140px;
+  height: 30px;
+  font-family: $fontopensans;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 0 var($dark-green-blue);
+  background-color: #e17334;
+  border: solid 1px white;
+}
+.js-response {
+  text-align: center;
+  padding-bottom: 20px;
+}

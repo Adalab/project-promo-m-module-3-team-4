@@ -1,0 +1,89 @@
+.container-profile {
+  background-color: $bfcdd-0-silver;
+  padding: 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    border-radius: 1rem;
+    width: 50%;
+  }
+  @media (min-width: 1024px) {
+    width: 60%;
+  }
+
+  &__resetbutton {
+    border: solid 1px $white-three;
+    border-radius: 2rem;
+    background-color: $bfcdd-0-silver;
+    padding: 6px 12px 5px 10px;
+    margin-bottom: 20px;
+    color: $gunmetal;
+    font-family: $fontopensans;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+
+    &__text {
+      padding-left: 8px;
+    }
+  }
+  &__containercard {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    box-shadow: 0px 0px 8px $black-32;
+    background-color: $white-three;
+    padding-top: 1rem;
+
+    .profile__name {
+      padding-left: 1rem;
+      border-left: $dirty-blue 5px solid;
+    }
+
+    &__name {
+      font-weight: 900;
+      font-size: 18px;
+      color: $dark-green-blue;
+      font-family: $fontmontserrat;
+      margin-bottom: 0.5rem;
+    }
+    &__profesion {
+      font-family: $fontmontserrat;
+      color: $gunmetal;
+    }
+    &__img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 240px;
+      height: 200px;
+      margin-top: 10px;
+    }
+  }
+  &__containerrrss {
+    color: $dark-green-blue;
+    display: flex;
+    padding: 0.6rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+
+    &__rrss {
+      width: 32px;
+      height: 32px;
+      color: $dark-green-blue;
+      border: $hospital-green solid 2px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+  }
+}

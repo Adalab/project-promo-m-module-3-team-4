@@ -1,0 +1,30 @@
+.footer {
+  border-top: 1px solid $white-two;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 0.8rem;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2.4rem;
+  }
+
+  &__copy {
+    color: $brownish-grey;
+    opacity: 0.5;
+    font-size: 14px;
+  }
+
+  &__logoImg {
+    width: 103px;
+  }
+}
