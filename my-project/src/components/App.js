@@ -1,17 +1,14 @@
 import React from "react";
-import logo from "../images/hi-me-logo.png";
 import imgDefault from "../images/img-default.jpg";
 import logoAdalab from "../images/logo-adalab.png";
 import "../stylesheets/App.scss";
+import { Header } from "./Card/Header";
 
 function App() {
   return (
     <>
       <div className="page">
-        <header className="page__header">
-          <img src={logo} alt="Hi Me! logo" width="120px" />
-          <h1></h1>
-        </header>
+        <Header />
 
         <div className="profile__wrapper">
           <section className="container-profile">
