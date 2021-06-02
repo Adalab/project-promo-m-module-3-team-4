@@ -7,14 +7,11 @@ import { Main } from "./Card/Main";
 
 function App() {
   return (
-    <>
-      <div className="page">
-        <Header />
-
-        <Main />
-        <Footer />
-      </div>
-    </>
+    <div className="page">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 }
 
