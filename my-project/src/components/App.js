@@ -1,9 +1,8 @@
 import React from "react";
 import imgDefault from "../images/img-default.jpg";
-import logoAdalab from "../images/logo-adalab.png";
 import "../stylesheets/App.scss";
 import { Header } from "./Card/Header";
-
+import { Footer } from "./Card/Footer";
 function App() {
   return (
     <>
@@ -328,17 +327,7 @@ function App() {
             </p>
           </div>
         </div>
-
-        <footer className="footer">
-          <small className="footer__copy"> Nombre grupo &copy; 2021</small>
-          <a href="https://adalab.es/" title="Adalab" className="footer__logo">
-            <img
-              src={logoAdalab}
-              alt="logo-Adalab"
-              className="footer__logoImg"
-            />
-          </a>
-        </footer>
+        <Footer />
       </div>
     </>
   );
