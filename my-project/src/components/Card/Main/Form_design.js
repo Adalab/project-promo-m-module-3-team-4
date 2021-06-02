@@ -1,6 +1,6 @@
 import React from "react";
 
-function FormDesign() {
+function Form_design() {
   return (
     <fieldset className="design">
       <div className="fieldset__button">
@@ -66,4 +66,4 @@ function FormDesign() {
     </fieldset>
   );
 }
-export { FormDesign };
+export { Form_design };
