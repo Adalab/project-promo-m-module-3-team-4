@@ -1,5 +1,3 @@
-import React from "react";
-
 function Form_design() {
   return (
     <fieldset className="design">
