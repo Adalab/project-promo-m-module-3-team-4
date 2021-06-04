@@ -1,5 +1,6 @@
 import React from "react";
 import logoAdalab from "../../images/logo-adalab.png";
+import "../../stylesheets/layout/_footer.scss";
 
 function Footer() {
   return (
