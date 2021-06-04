@@ -1,8 +1,6 @@
-import React from "react";
-
 function FormFill() {
   return (
-    <fieldset className="fill">
+    <fieldset className="fill ">
       <div className="fieldset__button">
         <div className="fieldset__button--title">
           <i className="far fa-keyboard"></i>
@@ -11,7 +9,7 @@ function FormFill() {
         <i className="fas fa-chevron-up arrowPointer js-fillButton"></i>
       </div>
 
-      <div className="none js-fill fill__wrapper">
+      <div className="none js-fill fill__wrapper ">
         <div className="fill__contact">
           <label className="fill__text" htmlFor="fullname">
             {" "}

@@ -2,6 +2,9 @@
 .none {
     display: none;
   }
+ .open{
+     display: block;
+ } 
 .arrowPointer {
     transform: rotate(180deg);
 }

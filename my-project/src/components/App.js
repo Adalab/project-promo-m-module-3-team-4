@@ -1,5 +1,3 @@
-import React from "react";
-
 import "../stylesheets/App.scss";
 import { Header } from "./Card/Header";
 import { Footer } from "./Card/Footer";

@@ -1,4 +1,4 @@
-import React from "react";
+
 import imgDefault from "../../../images/img-default.jpg";
 
 function Preview() {

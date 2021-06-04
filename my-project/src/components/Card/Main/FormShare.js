@@ -1,9 +1,6 @@
-import React from "react";
-
-
 function FormShare() {
   return (
-    <fieldset className="share">
+    <fieldset className="share ">
       <div className="fieldset__button">
         <div className="fieldset__button--title">
           <i className="fas fa-share-alt"></i>
