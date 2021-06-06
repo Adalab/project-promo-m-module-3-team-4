@@ -1,5 +1,6 @@
+@import "../core/variables";
 .container-profile {
-  background-color: $bfcdd-0-silver;
+  background-color: $silver;
   padding: 2.7rem;
   display: flex;
   justify-content: center;
@@ -16,7 +17,7 @@
   &__resetbutton {
     border: solid 1px $white-three;
     border-radius: 2rem;
-    background-color: $bfcdd-0-silver;
+    background-color: $silver;
     padding: 6px 12px 5px 10px;
     margin-bottom: 20px;
     color: $gunmetal;

@@ -1,5 +1,6 @@
-
 import imgDefault from "../../../images/img-default.jpg";
+import "../../../stylesheets/core/_variables.scss";
+import "../../../stylesheets/layout/_profile.scss";
 
 function Preview() {
   return (
