@@ -1,4 +1,5 @@
 import logo from "../../images/hi-me-logo.png";
+import "../../stylesheets/layout/_header.scss";
 
 function Header() {
   return (
