@@ -2,6 +2,9 @@ import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
 
 function Main() {
+  //estado del avatar
+  //job, name, git
+  //funcion manejadora del estado
   return (
     <div className="profile__wrapper">
       <Preview />

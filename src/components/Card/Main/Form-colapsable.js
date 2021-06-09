@@ -22,18 +22,17 @@ class Collapsable extends React.Component {
     // const openText = this.state.isOpen ? "Abierto" : "Cerrado";
     return (
       <>
-        <div className="fieldset__button">
+        <div className="fieldset__button" onClick={this.handleClick}>
           <div className="fieldset__button--title">
             <i className={this.props.icon}></i>
             <h2>{this.props.title}</h2>
           </div>
-          <i
-            className="fas fa-chevron-down fa-chevron-up js-designButton"
-            onClick={this.handleClick}
-          ></i>
+          <i className="fas fa-chevron-down fa-chevron-up js-designButton"></i>
         </div>
         <div className="js-design">
-          <div className={`design__expand ${openClassName}`}></div>
+          <div className={`design__expand ${openClassName}`}>
+            {this.props.children}
+          </div>
         </div>
       </>
     );
