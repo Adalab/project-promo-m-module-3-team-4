@@ -1,5 +1,5 @@
 import { Collapsable } from "./Form-colapsable";
-import "../../../stylesheets/layout/_collapsable.scss";
+//import "../../../stylesheets/layout/_collapsable.scss";
 
 function Form_design() {
   return (

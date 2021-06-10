@@ -1,14 +1,10 @@
 import "../stylesheets/App.scss";
-import { Header } from "./Card/Header";
-import { Footer } from "./Card/Footer";
-import { Main } from "./Card/Main";
+import { CardGenerator } from "./Card/CardGenerator";
 
 function App() {
   return (
     <div className="page">
-      <Header />
-      <Main />
-      <Footer />
+      <CardGenerator />
     </div>
   );
 }
