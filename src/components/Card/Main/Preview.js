@@ -1,8 +1,9 @@
 import imgDefault from "../../../images/img-default.jpg";
 import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_profile.scss";
+import Profile from "./Profile";
 
-function Preview() {
+function Preview(props) {
   return (
     <section className="container-profile">
       <div>
@@ -23,12 +24,7 @@ function Preview() {
             </h3>
           </div>
 
-          <div
-            className="container-profile__containercard__img js__profile-image"
-            style={{
-              backgroundImage: `url(${imgDefault})`,
-            }}
-          ></div>
+          <Profile image={props.image} />
 
           <div className="container-profile__containerrrss">
             <a

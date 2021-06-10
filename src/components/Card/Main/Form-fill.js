@@ -42,19 +42,7 @@ function FormFill(props) {
             </p>
           </div>
           <GetAvatar image={props.image} updateAvatar={props.updateAvatar} />
-          {/* <div className="fill__contact">
-            <label className="fill__text" htmlFor="photo">
-              {" "}
-              Imagen del perfil{" "}
-            </label>
-            <div className="js__profile-preview"></div>
-            <input
-              className="js_input fill__contact-image js__profile-upload-btn"
-              type="file"
-              id="photo"
-              name="photo"
-            />
-
+          {/*
             <button className="js__profile-trigger">Añadir imagen</button>
             <p className="js-validationPhoto validationMessage none">
               No se ha adjuntado ningún archivo
