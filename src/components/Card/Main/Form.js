@@ -9,9 +9,16 @@ function Form(props) {
     <form action="" method="POST" className="form js-form">
       <FormDesign />
       <FormFill
+        handleInput={props.handleInput}
+        name={props.name}
+        job={props.job}
         image={props.image}
         updateAvatar={props.updateAvatar}
-      ></FormFill>
+        email={props.email}
+        phone={props.phone}
+        linkedin={props.linkedin}
+        github={props.github}
+      />
       <FormShare />
     </form>
   );
