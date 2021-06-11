@@ -9,6 +9,7 @@ function Form(props) {
     <form action="" method="POST" className="form js-form">
       <Form_design />
       <FormFill
+        handleInput={props.handleInput}
         name={props.name}
         job={props.job}
         image={props.image}

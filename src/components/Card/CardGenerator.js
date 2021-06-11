@@ -35,6 +35,7 @@ function CardGenerator() {
   const updateAvatar = (image) => {
     setImage(image);
   };
+
   return (
     <div className="page">
       <Header />

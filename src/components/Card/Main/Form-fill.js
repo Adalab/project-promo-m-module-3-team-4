@@ -1,4 +1,4 @@
-import { Form } from "./Form";
+//import { Form } from "./Form";
 import { Collapsable } from "./Form-colapsable";
 import GetAvatar from "./GetAvatar";
 import React, { useState } from "react";
@@ -16,7 +16,7 @@ function FormFill(props) {
               labelText="Nombre completo"
               fillClass="fill__text fill__contact-name"
               type="text"
-              id="fullname"
+              id="name"
               name="name"
               placeholder="Ej: Sally Jill"
               maxLength="19"
@@ -31,7 +31,7 @@ function FormFill(props) {
               labelText="Puesto"
               fillClass="fill__text js_input fill__contact-role"
               type="text"
-              id="role"
+              id="job"
               name="job"
               placeholder="Ej: Front- end unicorn"
               maxLength="22"
@@ -60,7 +60,7 @@ function FormFill(props) {
             value={props.email}
             handleInput={props.handleInput}
             labelText="Email"
-            fillclass="fill__text js_input fill__contact-email"
+            fillclass="fill__text fill__contact-email"
             type="email"
             id="email"
             name="email"
@@ -74,7 +74,7 @@ function FormFill(props) {
             value={props.value}
             handleInput={props.handleInput}
             labelText="Teléfono"
-            fillClass="fill__text js_input fill__contact-phone"
+            fillClass="fill__text fill__contact-phone"
             type="tel"
             id="phone"
             name="phone"
@@ -102,7 +102,7 @@ function FormFill(props) {
             value={props.github}
             handleInput={props.handleInput}
             labelText="Github"
-            fillClass="fill__text js_input fill__contact-github fill__contactPrefix fill__contactPrefixGithub"
+            fillClass="fill__text fill__contact-github fill__contactPrefix fill__contactPrefixGithub"
             type="url"
             id="github"
             name="github"
