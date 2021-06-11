@@ -1,14 +1,15 @@
 import { Collapsable } from "./Form-colapsable";
+import { Palettes } from "./Palettes";
 //import "../../../stylesheets/layout/_collapsable.scss";
 
-function Form_design() {
+function FormDesign() {
   return (
     <fieldset className="design">
       <Collapsable title="Diseña" icon="far fa-object-ungroup">
         <h3>Colores</h3>
         <div className="colors__wrapper js_generalcolor">
           <label className="label" htmlFor="palette1">
-            <input
+            <Palettes
               type="radio"
               name="palette"
               id="palette1"
@@ -24,7 +25,7 @@ function Form_design() {
           </label>
 
           <label className="label" htmlFor="palette2">
-            <input
+            <Palettes
               type="radio"
               name="palette"
               id="palette2"
@@ -39,7 +40,7 @@ function Form_design() {
           </label>
 
           <label className="label" htmlFor="palette3">
-            <input
+            <Palettes
               type="radio"
               name="palette"
               id="palette3"
@@ -57,4 +58,4 @@ function Form_design() {
     </fieldset>
   );
 }
-export { Form_design };
+export { FormDesign };

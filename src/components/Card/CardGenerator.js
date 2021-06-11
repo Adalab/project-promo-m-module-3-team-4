@@ -3,15 +3,31 @@ import { Footer } from "./Footer";
 import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
 import { useState } from "react";
+import { Palettes } from "./Main/Palettes";
 
 function CardGenerator() {
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [image, setImage] = useState("");
-
   const updateAvatar = (image) => {
     setImage(image);
   };
+  const [palettes, setPalettes] = useState("1");
+  const handleClick = (value) => {
+    setPalettes({ palettes: value });
+  };
+
+  // const [data, setData] = useState({
+  // palette: "1",
+  // name: "",
+  //job: "",
+  //phone: "",
+  //email: "",
+  //linkedin: "",
+  //github: "",
+  //photo: "",
+  //});
+
   return (
     <div className="page">
       <Header />
