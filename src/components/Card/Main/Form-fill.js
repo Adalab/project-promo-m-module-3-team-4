@@ -29,7 +29,7 @@ function FormFill(props) {
               value={props.value}
               handleInput={props.handleInput}
               labelText="Puesto"
-              fillClass="fill__text js_input fill__contact-role"
+              fillClass="fill__text fill__contact-role"
               type="text"
               id="job"
               name="job"
@@ -88,7 +88,7 @@ function FormFill(props) {
             value={props.linkedin}
             handleInput={props.handleInput}
             labelText="Linkedin"
-            fillClass="fill__text fill__contactPrefix"
+            fillClass="fill__text fill__contact-name"
             type="url"
             id="linkedin"
             name="linkedin"
