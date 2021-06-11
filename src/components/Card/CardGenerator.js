@@ -4,7 +4,6 @@ import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
 import { useState } from "react";
 
-
 function CardGenerator() {
   const [palettes, setPalettes] = useState("1");
   const [name, setName] = useState("");
@@ -14,8 +13,7 @@ function CardGenerator() {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
-  
-  
+
   const handleClick = (value) => {
     setPalettes({ palettes: value });
   };
@@ -25,7 +23,7 @@ function CardGenerator() {
 
   const handleInput = (inputName, inputValue) => {
     if (inputName === "palettes") {
-      setPalette(inputValue);
+      setPalettes(inputValue);
     } else if (inputName === "name") {
       setName(inputValue);
     } else if (inputName === "job") {
@@ -41,15 +39,12 @@ function CardGenerator() {
     }
   };
 
-  const updateAvatar = (image) => {
-    setImage(image);
-  };
-
   return (
     <div className="page">
       <Header />
       <div className="profile__wrapper">
         <Preview
+          handleClick={handleClick}
           palette={palettes}
           name={name}
           job={job}
