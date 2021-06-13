@@ -39,13 +39,6 @@ function Landing() {
         >
           comenzar
         </Link>
-        {/* <a
-          href="./profile.html"
-          title="comenzar a usar aplicación"
-          className="main__button"
-        >
-          comenzar
-        </a> */}
       </main>
       <Footer />
     </body>
