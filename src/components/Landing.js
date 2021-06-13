@@ -1,6 +1,8 @@
 import { Footer } from "./Card/Footer";
 import logo from "../images/hi-me-logo.png";
-import "./stylesheets/layout/_landing.scss";
+import { Link } from "react-router-dom";
+import "../stylesheets/layout/_landing.scss";
+import "../stylesheets/core/_variables.scss";
 
 function Landing() {
   return (
@@ -30,14 +32,20 @@ function Landing() {
             <p className="main__words">Comparte</p>
           </div>
         </section>
-
-        <a
+        <Link
+          to="/cardgenerator"
+          title="comenzar a usar aplicación"
+          className="main__button"
+        >
+          comenzar
+        </Link>
+        {/* <a
           href="./profile.html"
           title="comenzar a usar aplicación"
           className="main__button"
         >
           comenzar
-        </a>
+        </a> */}
       </main>
       <Footer />
     </body>
