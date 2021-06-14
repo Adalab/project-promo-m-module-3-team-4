@@ -3,6 +3,7 @@ import { Footer } from "./Footer";
 import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
 import { useState } from "react";
+//import Reset from "./Main/Reset";
 
 function CardGenerator() {
   const [palettes, setPalettes] = useState("1");
@@ -14,9 +15,9 @@ function CardGenerator() {
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
 
-  const handleClick = (value) => {
-    setPalettes({ palettes: value });
-  };
+  // const handleClick = (value) => {
+  //   setPalettes({ palettes: value });
+  // };
   const updateAvatar = (image) => {
     setImage(image);
   };
@@ -38,13 +39,23 @@ function CardGenerator() {
       setGithub(inputValue);
     }
   };
+  const handleReset = () => {
+    setPalettes("");
+    setName("");
+    setJob("");
+    setImage("");
+    setPhone("");
+    setEmail("");
+    setGithub("");
+    setLinkedin("");
+  };
 
   return (
     <div className="page">
       <Header />
       <div className="profile__wrapper">
         <Preview
-          handleClick={handleClick}
+          //handleClick={handleClick}
           palette={palettes}
           name={name}
           job={job}
@@ -57,7 +68,7 @@ function CardGenerator() {
         />
         <Form
           handleInput={handleInput}
-          handleClick={handleClick}
+          //handleClick={handleClick}
           palette={palettes}
           name={name}
           job={job}

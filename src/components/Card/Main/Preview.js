@@ -2,21 +2,14 @@ import defaultAvatar from "../../../images/img-default.jpg";
 import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_profile.scss";
 import Profile from "./Profile";
+import Reset from "./Reset";
 
 function Preview(props) {
   return (
     <section className="container-profile">
       <div>
-        <button className="container-profile__resetbutton">
-          <i className="far fa-trash-alt"></i>
-          <h3 className="container-profile__resetbutton__text js-reset">
-            reset
-          </h3>
-        </button>
-
-        <div
-          className={`container-profile__containercard palette${props.palletes}`}
-        >
+        <Reset />
+        <div className={`container-profile__containercard js-palette2`}>
           <div className="profile__name">
             <h2 className="container-profile__containercard__name js-nameProfile">
               {props.name === "" ? "Nombre Apellido" : props.name}

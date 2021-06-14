@@ -1,11 +1,11 @@
 import React from "react";
 function Palettes(props) {
   const handleClick = (event) => {
-    props.handleClick(event.target.value);
+    props.handleInput(event.target.value);
   };
   return (
     <input
-      handleClick={props.handleclick}
+      //handleClick={props.handleclick}
       type={props.type}
       name={props.name}
       id={props.id}
