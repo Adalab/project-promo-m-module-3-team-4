@@ -8,7 +8,7 @@ function Preview(props) {
   return (
     <section className="container-profile">
       <div>
-        <Reset />
+        <Reset handleReset={props.handleReset} />
         <div className={`container-profile__containercard js-palette2`}>
           <div className="profile__name">
             <h2 className="container-profile__containercard__name js-nameProfile">

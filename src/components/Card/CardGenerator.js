@@ -63,7 +63,7 @@ function CardGenerator() {
           phone={phone}
           linkedin={linkedin}
           github={github}
-          // handleReset={handleReset}
+          handleReset={handleReset}
           image={image}
         />
         <Form
