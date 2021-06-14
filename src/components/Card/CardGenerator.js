@@ -57,6 +57,7 @@ function CardGenerator() {
         />
         <Form
           handleInput={handleInput}
+          handleClick={handleClick}
           palette={palettes}
           name={name}
           job={job}

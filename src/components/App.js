@@ -3,6 +3,7 @@ import { CardGenerator } from "./Card/CardGenerator";
 import { Landing } from "./Landing";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>

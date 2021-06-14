@@ -5,6 +5,7 @@ function Palettes(props) {
   };
   return (
     <input
+      handleClick={props.handleclick}
       type={props.type}
       name={props.name}
       id={props.id}

@@ -11,7 +11,7 @@ function Input(props) {
         {props.labelText}
       </label>
       <input
-        onChange={handleInput}
+        onChange={props.handleInput}
         className={`input ${props.fillClass}`}
         id={props.id}
         type={props.type}
