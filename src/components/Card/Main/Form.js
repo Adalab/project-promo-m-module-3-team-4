@@ -7,8 +7,8 @@ import "../../../stylesheets/layout/_form.scss";
 function Form(props) {
   return (
     <form action="" method="POST" className="form js-form">
-      <FormDesign handleClick={props.handleClick} />
-      <FormFill>
+      <FormDesign handleClick={props.handleClick} Palettes={props.palette} />
+      <FormFill
         handleInput={props.handleInput}
         name={props.name}
         job={props.job}
@@ -18,7 +18,7 @@ function Form(props) {
         phone={props.phone}
         linkedin={props.linkedin}
         github={props.github}
-      </FormFill>
+      />
       <FormShare />
     </form>
   );

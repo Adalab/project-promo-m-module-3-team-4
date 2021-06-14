@@ -1,4 +1,4 @@
-import imgDefault from "../../../images/img-default.jpg";
+import defaultAvatar from "../../../images/img-default.jpg";
 import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_profile.scss";
 import Profile from "./Profile";
@@ -17,10 +17,10 @@ function Preview(props) {
         <div className="container-profile__containercard">
           <div className="profile__name">
             <h2 className="container-profile__containercard__name js-nameProfile">
-              Nombre Apellido
+              {props.name === "" ? "Nombre Apellido" : props.name}
             </h2>
             <h3 className="container-profile__containercard__profesion js-rolProfile">
-              Front-end developer
+              {props.job === "" ? "Frontend Developer" : props.job}
             </h3>
           </div>
 
@@ -28,28 +28,28 @@ function Preview(props) {
 
           <div className="container-profile__containerrrss">
             <a
-              href=""
+              href={`phone${props.phone}`}
               target="_blank"
               className="container-profile__containerrrss__rrss js-phone"
             >
               <i className="fas fa-mobile-alt"></i>
             </a>
             <a
-              href="mailto:"
+              href={`mail${props.mail}`}
               target="_blank"
               className="container-profile__containerrrss__rrss js-mail"
             >
               <i className="far fa-envelope"></i>
             </a>
             <a
-              href=""
+              href={`linkedin${props.linkedin}`}
               target="_blank"
               className="container-profile__containerrrss__rrss js-linkedin"
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a
-              href=""
+              href={`Github${props.github}`}
               target="_blank"
               className="container-profile__containerrrss__rrss js-github"
             >

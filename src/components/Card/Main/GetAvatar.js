@@ -87,5 +87,8 @@ class GetAvatar extends React.Component {
     );
   }
 }
-
+GetAvatar.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  updateAvatar: PropTypes.func.isRequired,
+};
 export default GetAvatar;
