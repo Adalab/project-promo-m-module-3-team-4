@@ -1,7 +1,7 @@
 import React from "react";
 function Palettes(props) {
   const handleClick = (event) => {
-    props.handleClick(event.currentTarget.value);
+    props.handleClick(event.target.value);
   };
   return (
     <input

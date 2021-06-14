@@ -14,7 +14,9 @@ function Preview(props) {
           </h3>
         </button>
 
-        <div className="container-profile__containercard">
+        <div
+          className={`container-profile__containercard palette${props.palletes}`}
+        >
           <div className="profile__name">
             <h2 className="container-profile__containercard__name js-nameProfile">
               {props.name === "" ? "Nombre Apellido" : props.name}
