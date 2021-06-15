@@ -8,7 +8,7 @@ function Landing() {
   return (
     <body>
       <main className="main">
-        <section class="main__logoContainer">
+        <section className="main__logoContainer">
           <img src={logo} alt="logo" className="main__logo" width="200px" />
 
           <div className="main__titleContainer">
