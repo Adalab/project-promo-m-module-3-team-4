@@ -2,7 +2,7 @@ import React from "react";
 
 function Input(props) {
   const handleInput = (ev) => {
-    props.handleInput(props.name, ev.currentTarget.value);
+    props.handleInput(props.name, ev.Target.value);
   };
 
   return (
