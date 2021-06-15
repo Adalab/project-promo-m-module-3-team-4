@@ -6,7 +6,7 @@ import { useState } from "react";
 //import Reset from "./Main/Reset";
 
 function CardGenerator() {
-  const [palettes, setPalettes] = useState("1");
+  const [palettes, setPalettes] = useState("3");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [image, setImage] = useState("");
@@ -15,9 +15,6 @@ function CardGenerator() {
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
 
-  // const handleClick = (value) => {
-  //   setPalettes({ palettes: value });
-  // };
   const updateAvatar = (image) => {
     setImage(image);
   };
@@ -55,7 +52,6 @@ function CardGenerator() {
       <Header />
       <div className="profile__wrapper">
         <Preview
-          //handleClick={handleClick}
           palette={palettes}
           name={name}
           job={job}
@@ -68,7 +64,6 @@ function CardGenerator() {
         />
         <Form
           handleInput={handleInput}
-          //handleClick={handleClick}
           palette={palettes}
           name={name}
           job={job}
