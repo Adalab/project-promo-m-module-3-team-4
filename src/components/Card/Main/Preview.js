@@ -30,7 +30,7 @@ function Preview(props) {
               <i className="fas fa-mobile-alt"></i>
             </a>
             <a
-              href={`mail${props.mail}`}
+              href={`mailto:${props.email}`}
               target="_blank"
               className="container-profile__containerrrss__rrss js-mail"
             >

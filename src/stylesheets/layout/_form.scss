@@ -301,15 +301,18 @@
 }
 
 .js__profile-trigger {
+  display: block;
   width: 140px;
   height: 30px;
   font-family: $fontopensans;
+  text-align: center;
   font-size: 14px;
   color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 0 4px 0 var($dark-green-blue);
   background-color: #e17334;
   border: solid 1px white;
+  padding-top: 7px;
 }
 .js-response {
   text-align: center;
