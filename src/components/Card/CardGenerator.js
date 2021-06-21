@@ -20,7 +20,8 @@ function CardGenerator() {
   };
 
   const handleInput = (inputName, inputValue) => {
-    if (inputName === "palettes") {
+    console.log(inputName, inputValue);
+    if (inputName === "palette") {
       setPalettes(inputValue);
     } else if (inputName === "name") {
       setName(inputValue);

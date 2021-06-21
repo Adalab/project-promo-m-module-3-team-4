@@ -2,7 +2,7 @@ import React from "react";
 
 function Palettes(props) {
   const handleClick = (event) => {
-    props.handleInput(event.target.value);
+    props.handleInput(event.target.name, event.target.value);
   };
   return (
     <input
@@ -10,8 +10,8 @@ function Palettes(props) {
       name={props.name}
       id={props.id}
       value={props.value}
-      checked={props.value}
-      className="js-palette1"
+      checked={props.checked}
+      className="js-palette "
       onChange={handleClick}
     />
   );

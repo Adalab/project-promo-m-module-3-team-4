@@ -2,7 +2,7 @@ import { Collapsable } from "./Form-colapsable";
 import { Palettes } from "./Palettes";
 //import "../../../stylesheets/layout/_collapsable.scss";
 
-function FormDesign() {
+function FormDesign(props) {
   return (
     <fieldset className="design">
       <Collapsable title="Diseña" icon="far fa-object-ungroup">
@@ -14,8 +14,9 @@ function FormDesign() {
               name="palette"
               id="palette1"
               value="1"
-              checked
+              checked="checked"
               className="js-palette1"
+              handleInput={props.handleInput}
             />
             <ul className="palette__wrapper">
               <li className="color palette1__color1"></li>
@@ -31,6 +32,7 @@ function FormDesign() {
               id="palette2"
               value="2"
               className="js-palette2"
+              handleInput={props.handleInput}
             />
             <ul className="palette__wrapper">
               <li className="color palette2__color1"></li>
@@ -46,6 +48,7 @@ function FormDesign() {
               id="palette3"
               value="3"
               className="js-palette3"
+              handleInput={props.handleInput}
             />
             <ul className="palette__wrapper">
               <li className="color palette3__color1"></li>

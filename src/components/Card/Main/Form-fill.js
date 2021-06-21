@@ -5,8 +5,9 @@ import React, { useState } from "react";
 import Input from "./Input";
 
 function FormFill(props) {
+  console.log(props);
   return (
-    <fieldset className="fill ">
+    <fieldset className="fill">
       <Collapsable title="Rellena" icon="far fa-keyboard">
         <div className="none js-fill fill__wrapper ">
           <div className="fill__contact">

@@ -5,10 +5,14 @@ import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_form.scss";
 
 function Form(props) {
+  console.log(props);
   return (
     <form action="" method="POST" className="form js-form">
-      <FormDesign handleClick={props.handleClick} />
-      <FormFill>
+      <FormDesign
+        handleClick={props.handleClick}
+        handleInput={props.handleInput}
+      />
+      <FormFill
         handleInput={props.handleInput}
         name={props.name}
         job={props.job}
@@ -18,7 +22,7 @@ function Form(props) {
         phone={props.phone}
         linkedin={props.linkedin}
         github={props.github}
-      </FormFill>
+      />
       <FormShare />
     </form>
   );
