@@ -2,7 +2,8 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { fetchCard } from "../../services/fetchCard";
 //import Reset from "./Main/Reset";
 
 function CardGenerator() {
@@ -14,6 +15,15 @@ function CardGenerator() {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    if (data.length === 0) {
+      fetchCard().then((data) => {
+        setData(data);
+      });
+    }
+  }, []);
 
   const updateAvatar = (image) => {
     setImage(image);
@@ -74,6 +84,7 @@ function CardGenerator() {
           github={github}
           image={image}
           updateAvatar={updateAvatar}
+          data={data}
         />
 
         {/* <div className="tooltipFill js-tooltipFill none">

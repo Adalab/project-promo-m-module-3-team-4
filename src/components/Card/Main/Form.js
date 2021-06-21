@@ -23,7 +23,7 @@ function Form(props) {
         linkedin={props.linkedin}
         github={props.github}
       />
-      <FormShare />
+      <FormShare data={props.data} />
     </form>
   );
 }

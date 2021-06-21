@@ -1,5 +1,6 @@
 import { Collapsable } from "./Form-colapsable";
-function FormShare() {
+//import { fetchCard } from "../../../services/fetchCard";
+function FormShare(props) {
   return (
     <fieldset className="share ">
       <Collapsable title="Comparte" icon="fas fa-share-alt">
@@ -14,7 +15,7 @@ function FormShare() {
 
           <div className="none card--created">
             <h3 className="none">La tarjeta ha sido creada:</h3>
-            <small className="js-url"></small>
+            <small className="js-url">{props.data}</small>
             <a className="none share__button--twitter js-aTwitter">
               Compartir en Twitter
             </a>
