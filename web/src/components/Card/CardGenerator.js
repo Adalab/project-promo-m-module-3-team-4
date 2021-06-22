@@ -17,13 +17,13 @@ function CardGenerator() {
   const [github, setGithub] = useState("");
   const [data, setData] = useState("");
 
-  useEffect(() => {
-    if (data.length === 0) {
-      fetchCard().then((data) => {
-        setData(data);
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (data.length === 0) {
+  //     fetchCard().then((data) => {
+  //       setData(data);
+  //     });
+  //   }
+  // }, []);
 
   const updateAvatar = (image) => {
     setImage(image);

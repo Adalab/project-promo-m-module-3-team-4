@@ -1,12 +1,19 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./stylesheets/index.css";
-import App from "./components/App";
-import { HashRouter } from "react-router-dom";
+const express = require("express");
+const cors = require("cors");
 
-ReactDOM.render(
-  <HashRouter>
-    <App />
-  </HashRouter>,
-  document.getElementById("root")
-);
+const server = express();
+
+server.use(cors());
+server.use(express.json());
+
+const serverPort = 4000;
+server.listen(serverPort, () => {
+  console.log(`Server listening at http://localhost:${serverPort}`);
+});
+
+server.get("/users", (req, res) => {
+  const response = {
+    users: [{ name: "Sofía" }, { name: "María" }],
+  };
+  res.json(response);
+});
