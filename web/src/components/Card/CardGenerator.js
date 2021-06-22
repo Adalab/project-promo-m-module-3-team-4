@@ -3,7 +3,7 @@ import { Footer } from "./Footer";
 import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
 import { useState, useEffect } from "react";
-import { fetchCard } from "../../services/fetchCard";
+
 //import Reset from "./Main/Reset";
 
 function CardGenerator() {
@@ -15,7 +15,7 @@ function CardGenerator() {
   const [phone, setPhone] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
-  const [data, setData] = useState("");
+  const [data, setData] = useState({});
 
   // useEffect(() => {
   //   if (data.length === 0) {
@@ -27,6 +27,10 @@ function CardGenerator() {
 
   const updateAvatar = (image) => {
     setImage(image);
+    setData({
+      ...data,
+      photo: image,
+    });
   };
 
   const handleInput = (inputName, inputValue) => {
@@ -46,6 +50,10 @@ function CardGenerator() {
     } else if (inputName === "github") {
       setGithub(inputValue);
     }
+    setData({
+      ...data,
+      [inputName]: inputValue,
+    });
   };
   const handleReset = () => {
     setPalettes("");
