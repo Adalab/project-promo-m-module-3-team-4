@@ -47,5 +47,8 @@ server.post("/card/", (req, res) => {
   } else if (req.body.github === undefined) {
     response.sucess = false;
     response.error = "Missing github parameter";
+  } else {
+    response.sucess = true;
+    response.cardURL = "mi_url_com";
   }
 });

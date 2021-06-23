@@ -1,6 +1,4 @@
-import React from "react";
-
-const sendCard = "https://awesome-profile-cards.herokuapp.com/card";
+const sendCard = "https://localhost:3000/card";
 
 const fetchCard = (data) => {
   return fetch(sendCard, {
