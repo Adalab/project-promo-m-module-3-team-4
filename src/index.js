@@ -11,9 +11,41 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-server.get("/users", (req, res) => {
-  const response = {
-    users: [{ name: "Sofía" }, { name: "María" }],
-  };
-  res.json(response);
+const serverStaticPath = "./public";
+
+server.use(express.static(serverStaticPath));
+
+server.get("/card/:id", (req, res) => {});
+
+server.get("*", (req, res) => {
+  const notFoundFileRelativePath = "../web/404-not-found.html";
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
+  res.status(404).sendFile(notFoundFileAbsolutePath);
+});
+
+server.post("/card/", (req, res) => {
+  const response = {};
+  console.log(req.body);
+  if (req.body.name === undefined) {
+    response.sucess = false;
+    response.error = "Missing name parameter";
+  } else if (req.body.job === undefined) {
+    response.sucess = false;
+    response.error = "Missing job parameter";
+  } else if (req.body.image === undefined) {
+    response.sucess = false;
+    response.error = "Missing image parameter";
+  } else if (req.body.email === undefined) {
+    response.sucess = false;
+    response.error = "Missing email parameter";
+  } else if (req.body.linkedin === undefined) {
+    response.sucess = false;
+    response.error = "Missing linkedin parameter";
+  } else if (req.body.github === undefined) {
+    response.sucess = false;
+    response.error = "Missing github parameter";
+  }
 });
