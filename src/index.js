@@ -15,7 +15,7 @@ const serverStaticPath = "./public";
 
 server.use(express.static(serverStaticPath));
 
-server.get("/card/:id", (req, res) => {});
+server.get("/cardgenerator/:id", (req, res) => {});
 
 server.get("*", (req, res) => {
   const notFoundFileRelativePath = "../web/404-not-found.html";
@@ -26,7 +26,7 @@ server.get("*", (req, res) => {
   res.status(404).sendFile(notFoundFileAbsolutePath);
 });
 
-server.post("/card/", (req, res) => {
+server.post("/cardgenerator/", (req, res) => {
   const response = {};
   console.log(req.body);
   if (req.body.name === undefined) {
