@@ -20,7 +20,7 @@ function FormDesign(props) {
             />
             <ul className="palette__wrapper">
               <li className="color palette1__color1"></li>
-              <li className="color palette1__color2"></li>
+              <li className="color colorList1"></li>
               <li className="color palette1__color3"></li>
             </ul>
           </label>
@@ -36,7 +36,7 @@ function FormDesign(props) {
             />
             <ul className="palette__wrapper">
               <li className="color palette2__color1"></li>
-              <li className="color palette2__color2"></li>
+              <li className="color colorList2"></li>
               <li className="color palette2__color3"></li>
             </ul>
           </label>
@@ -52,7 +52,7 @@ function FormDesign(props) {
             />
             <ul className="palette__wrapper">
               <li className="color palette3__color1"></li>
-              <li className="color palette3__color2"></li>
+              <li className="color colorList3"></li>
               <li className="color palette3__color3"></li>
             </ul>
           </label>

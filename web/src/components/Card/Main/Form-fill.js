@@ -61,7 +61,7 @@ function FormFill(props) {
             value={props.email}
             handleInput={props.handleInput}
             labelText="Email"
-            fillclass="fill__text fill__contact-email"
+            fillClass="fill__text fill__contact-role"
             type="email"
             id="email"
             name="email"

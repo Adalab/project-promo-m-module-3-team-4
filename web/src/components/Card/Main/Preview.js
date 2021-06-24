@@ -1,6 +1,7 @@
 import defaultAvatar from "../../../images/img-default.jpg";
 import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_profile.scss";
+import "../../../stylesheets/layout/_form.scss";
 import Profile from "./Profile";
 import Reset from "./Reset";
 
@@ -11,7 +12,9 @@ function Preview(props) {
         <Reset handleReset={props.handleReset} />
         <div className={`container-profile__containercard js-palette2`}>
           <div className="profile__name">
-            <h2 className="container-profile__containercard__name js-nameProfile">
+            <h2
+              className={`container-profile__containercard__name js-nameProfile palette${props.palette}__color2`}
+            >
               {props.name === "" ? "Nombre Apellido" : props.name}
             </h2>
             <h3 className="container-profile__containercard__profesion js-rolProfile">
