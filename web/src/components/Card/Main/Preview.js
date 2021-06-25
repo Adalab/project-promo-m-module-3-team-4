@@ -1,4 +1,3 @@
-import defaultAvatar from "../../../images/img-default.jpg";
 import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_profile.scss";
 import "../../../stylesheets/layout/_form.scss";

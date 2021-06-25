@@ -2,12 +2,12 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 //import Reset from "./Main/Reset";
 
 function CardGenerator() {
-  const [palettes, setPalettes] = useState("3");
+  const [palettes, setPalettes] = useState("1");
   const [name, setName] = useState("");
   const [job, setJob] = useState("");
   const [image, setImage] = useState("");
@@ -16,14 +16,6 @@ function CardGenerator() {
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
   const [data, setData] = useState({});
-
-  // useEffect(() => {
-  //   if (data.length === 0) {
-  //     fetchCard().then((data) => {
-  //       setData(data);
-  //     });
-  //   }
-  // }, []);
 
   const updateAvatar = (image) => {
     setImage(image);
