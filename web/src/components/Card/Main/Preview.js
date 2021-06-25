@@ -11,7 +11,7 @@ function Preview(props) {
       <div>
         <Reset handleReset={props.handleReset} />
         <div className={`container-profile__containercard js-palette2`}>
-          <div className="profile__name">
+          <div className={`profile__name palette${props.palette}__line`}>
             <h2
               className={`container-profile__containercard__name js-nameProfile palette${props.palette}__color2`}
             >
@@ -28,28 +28,28 @@ function Preview(props) {
             <a
               href={`phone${props.phone}`}
               target="_blank"
-              className="container-profile__containerrrss__rrss js-phone"
+              className={`container-profile__containerrrss__rrss js-phone palette${props.palette}__circle`}
             >
               <i className="fas fa-mobile-alt"></i>
             </a>
             <a
               href={`mailto:${props.email}`}
               target="_blank"
-              className="container-profile__containerrrss__rrss js-mail"
+              className={`container-profile__containerrrss__rrss js-mail palette${props.palette}__circle`}
             >
               <i className="far fa-envelope"></i>
             </a>
             <a
               href={`linkedin${props.linkedin}`}
               target="_blank"
-              className="container-profile__containerrrss__rrss js-linkedin"
+              className={`container-profile__containerrrss__rrss js-linkedin palette${props.palette}__circle`}
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a
               href={`Github${props.github}`}
               target="_blank"
-              className="container-profile__containerrrss__rrss js-github"
+              className={`container-profile__containerrrss__rrss js-github palette${props.palette}__circle`}
             >
               <i className="fab fa-github-alt"></i>
             </a>

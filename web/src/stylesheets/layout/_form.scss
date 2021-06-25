@@ -154,7 +154,24 @@
 .palette3__color3 {
   background: $light-grey-blue;
 }
-
+.palette1__circle {
+  border-color: $hospital-green;
+}
+.palette2__circle {
+  border-color: $tomato;
+}
+.palette3__circle {
+  border-color: $light-grey-blue;
+}
+.palette1__line {
+  border-left: $dark-green-blue 5px solid;
+}
+.palette2__line {
+  border-left: $dried-blood 5px solid;
+}
+.palette3__line {
+  border-left: $slate 5px solid;
+}
 .fill {
   //   max-width: 400px;
 
