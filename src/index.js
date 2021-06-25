@@ -1,21 +1,29 @@
 const express = require("express");
 const cors = require("cors");
+const Database = require("better-sqlite3");
 
 const server = express();
 
 server.use(cors());
 server.use(express.json());
+server.use(express.json({ limit: "10mb" }));
 
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
 const serverStaticPath = "./public";
-
 server.use(express.static(serverStaticPath));
+server.set("view engine", "ejs");
 
-server.get("/cardgenerator/:id", (req, res) => {});
+const db = new Database("./src/data/dataBase.db", { verbose: console.log });
+
+server.get("/card/:id", (req, res) => {
+  const query = db.prepare("SELECT * FROM card");
+  const data = query.all();
+  res.send(data);
+});
 
 server.get("*", (req, res) => {
   const notFoundFileRelativePath = "../web/404-not-found.html";

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/f2e0e49a34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://csshake.surge.sh/csshake.min.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="/static/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>Create cards</title>
+    <link
+      href="/static/css/main.883a2663.chunk.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body class="card">
+    <section class="preview">
+        <div>
+            <Reset handleReset={props.handleReset} />
+            <div className={`container-profile__containercard js-palette2`}>
+              <div className="profile__name palette<%= palette %>">
+                <h2
+                  className={`container-profile__containercard__name js-nameProfile palette${props.palette}__color2`}
+                >
+                  {props.name === "" ? "Nombre Apellido" : props.name}
+                </h2>
+                <h3 className="container-profile__containercard__profesion js-rolProfile">
+                  {props.job === "" ? "Frontend Developer" : props.job}
+                </h3>
+              </div>
+    
+              <Profile image={props.image} />
+    
+              <div className="container-profile__containerrrss">
+                <a
+                  href={`phone${props.phone}`}
+                  target="_blank"
+                  className={`container-profile__containerrrss__rrss js-phone palette${props.palette}__circle`}
+                >
+                  <i className="fas fa-mobile-alt"></i>
+                </a>
+                <a
+                  href={`mailto:${props.email}`}
+                  target="_blank"
+                  className={`container-profile__containerrrss__rrss js-mail palette${props.palette}__circle`}
+                >
+                  <i className="far fa-envelope"></i>
+                </a>
+                <a
+                  href={`linkedin${props.linkedin}`}
+                  target="_blank"
+                  className={`container-profile__containerrrss__rrss js-linkedin palette${props.palette}__circle`}
+                >
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href={`Github${props.github}`}
+                  target="_blank"
+                  className={`container-profile__containerrrss__rrss js-github palette${props.palette}__circle`}
+                >
+                  <i className="fab fa-github-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+    </section>
+  </body>
+</html>
