@@ -1,4 +1,3 @@
-//import { Form } from "./Form";
 import { Collapsable } from "./Form-colapsable";
 import GetAvatar from "./GetAvatar";
 import React, { useState } from "react";
