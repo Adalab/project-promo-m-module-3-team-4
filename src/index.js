@@ -27,8 +27,8 @@ server.set("view engine", "ejs");
 const db = new Database("./src/data/dataBase.db", { verbose: console.log });
 
 server.get("/card/:id", (req, res) => {
-  const query = db.prepare("SELECT * FROM card");
-  const data = query.all();
+  const query = db.prepare("SELECT * FROM card WHERE id = ?");
+  const data = query.get(req.params.id);
   res.send(data);
 });
 
