@@ -13,10 +13,17 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
+//Servidores estáticos (uno para la app React)
 const serverStaticPath = "./public";
 server.use(express.static(serverStaticPath));
+//otro para los css de mi tarjeta
+const serverStaticPath2 = "./static";
+server.use(express.static(serverStaticPath2));
+
+//Motor de plantillas
 server.set("view engine", "ejs");
 
+//Base de datos
 const db = new Database("./src/data/dataBase.db", { verbose: console.log });
 
 server.get("/card/:id", (req, res) => {
