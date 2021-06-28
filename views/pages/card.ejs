@@ -29,40 +29,43 @@
               <div className="profile__name palette<%= palette %>">
                 <h2
                   className={`container-profile__containercard__name js-nameProfile palette${props.palette}__color2`}
-                >
-                  {props.name === "" ? "Nombre Apellido" : props.name}
+                > <%= name %>
                 </h2>
                 <h3 className="container-profile__containercard__profesion js-rolProfile">
-                  {props.job === "" ? "Frontend Developer" : props.job}
+                  <%= job %>
+                
                 </h3>
               </div>
     
-              <Profile image={props.image} />
-    
+              <div
+              class="preview__card-image js__profile-image"
+              style="background-image: url('<%= image %>')" > 
+              </div>
+             
               <div className="container-profile__containerrrss">
                 <a
-                  href={`phone${props.phone}`}
+                  href="tel:<%= phone %>"
                   target="_blank"
                   className={`container-profile__containerrrss__rrss js-phone palette${props.palette}__circle`}
                 >
                   <i className="fas fa-mobile-alt"></i>
                 </a>
                 <a
-                  href={`mailto:${props.email}`}
+                  href="email:<%= email %>"
                   target="_blank"
                   className={`container-profile__containerrrss__rrss js-mail palette${props.palette}__circle`}
                 >
                   <i className="far fa-envelope"></i>
                 </a>
                 <a
-                  href={`linkedin${props.linkedin}`}
+                  href="linkedin:<%= linkedin %>"
                   target="_blank"
                   className={`container-profile__containerrrss__rrss js-linkedin palette${props.palette}__circle`}
                 >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
                 <a
-                  href={`Github${props.github}`}
+                  href="github:<%= github %>"
                   target="_blank"
                   className={`container-profile__containerrrss__rrss js-github palette${props.palette}__circle`}
                 >
