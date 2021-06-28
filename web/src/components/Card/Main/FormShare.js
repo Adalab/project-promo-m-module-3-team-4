@@ -10,17 +10,17 @@ function FormShare(props) {
     ev.preventDefault();
     console.log(props.data);
 
-    //   fetchCard(props.data).then((data) => {
-    //     //setData(data);
-    //     console.log(data);
-    //     if (data.success === false) {
-    //       setCardError(data.error);
-    //       setCardURL("");
-    //     } else {
-    //       setCardError("");
-    //       setCardURL(data.cardURL);
-    //     }
-    //   });
+    fetchCard(props.data).then((data) => {
+      //setData(data);
+      console.log(data);
+      if (data.success === false) {
+        setCardError(data.error);
+        setCardURL("");
+      } else {
+        setCardError("");
+        setCardURL(data.cardURL);
+      }
+    });
   };
 
   return (

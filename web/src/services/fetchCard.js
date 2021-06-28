@@ -1,4 +1,4 @@
-const sendCard = "/card";
+const sendCard = "/cardgenerator";
 
 const fetchCard = (data) => {
   console.log(data);
