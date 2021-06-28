@@ -5,7 +5,6 @@ const Database = require("better-sqlite3");
 const server = express();
 
 server.use(cors());
-server.use(express.json());
 server.use(express.json({ limit: "10mb" }));
 
 const serverPort = process.env.PORT || 3000;
@@ -32,14 +31,14 @@ server.get("/card/:id", (req, res) => {
   res.send(data);
 });
 
-// server.get("*", (req, res) => {
-//   const notFoundFileRelativePath = "../web/404-not-found.html";
-//   const notFoundFileAbsolutePath = path.join(
-//     __dirname,
-//     notFoundFileRelativePath
-//   );
-//   res.status(404).sendFile(notFoundFileAbsolutePath);
-// });
+server.get("*", (req, res) => {
+  const notFoundFileRelativePath = "../web/404-not-found.html";
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
+  res.status(404).sendFile(notFoundFileAbsolutePath);
+});
 
 server.post("/card", (req, res) => {
   const response = {};
@@ -67,22 +66,26 @@ server.post("/card", (req, res) => {
     response.sucess = true;
 
     const query = db.prepare(
-      `INSERT INTO card(palette, name, job, image, email, phone, linkedin, github) VALUES(?, ?, ?, ?, ?, ?, ?, ?)`
+      `INSERT INTO card(palette, name, job, photo, email, phone, linkedin, github) VALUES(?, ?, ?, ?, ?, ?, ?, ?)`
     );
     const result = query.run(
       req.body.palette,
       req.body.name,
       req.body.job,
-      req.body.image,
+      req.body.photo,
       req.body.email,
       req.body.phone,
       req.body.linkedin,
       req.body.github
     );
-
-    response.cardURL =
-      "https://hime-awesome-profile-cards.herokuapp.com/#/" +
-      result.lastInsertRowid;
+    if (req.hostname === "localhost") {
+      response.cardURL = `http://localhost:${serverPort}/card/${result.lastInsertRowid}`;
+      console.log(response.cardURL);
+    } else {
+      response.cardURL =
+        "https://hime-awesome-profile-cards.herokuapp.com/#/" +
+        result.lastInsertRowid;
+    }
   }
   res.json({ response });
 });
