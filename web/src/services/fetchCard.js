@@ -1,6 +1,7 @@
-const sendCard = "/cardgenerator";
+const sendCard = "/card";
 
 const fetchCard = (data) => {
+  console.log(data);
   return fetch(sendCard, {
     method: "POST",
     headers: {

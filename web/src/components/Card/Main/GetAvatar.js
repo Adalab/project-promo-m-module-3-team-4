@@ -23,18 +23,16 @@ class GetAvatar extends React.Component {
     // cuando pulsamos en la label o en <input type="file" />:
     // 1º se abre la ventana de nuestro ordenador para elegir un fichero
     // 2º cuando la usuaria elije un fichero se ejecuta este método manejador de eventos
-    console.log("La usuaria ha abierto la ventana para elegir ficheros");
 
     // cuando se abre la ventana de nuestro navegador podemos elegir uno o varios ficheros por ello ev.currentTarget.files es una array
-    console.log("La usuaria ha elegido los ficheros", ev.currentTarget.files);
 
     // para este ejercicio nos interesa solo el primero de los ficheros elegidos por la usuaria, por eso ponemos [0]
     // este primer fichero es un objeto con información útil del fichero como: nombre, última modificación, tamaño del fichero...
     // este objeto no tiene información privada del ordenador de la usuaria, por ejemplo no tenemos información de la carpeta en la que está la imagen
-    console.log(
-      "El primero de los ficheros elegidos es",
-      ev.currentTarget.files[0]
-    );
+    // console.log(
+    //   "El primero de los ficheros elegidos es",
+    //   ev.currentTarget.files[0]
+    // );
 
     // compruebo si la usuaria ha elegido al menos un fichero
     if (ev.currentTarget.files.length > 0) {
@@ -55,7 +53,7 @@ class GetAvatar extends React.Component {
     // cuando el navegador termina de manejar el fichero se ejecuta este método porque lo hemos indicado en this.fr.addEventListener('load', this.getImage);
 
     // this.fr guarda información útil sobre el fichero cargado
-    console.log("Información útil sobre el fichero cargado", this.fr);
+    // console.log("Información útil sobre el fichero cargado", this.fr);
 
     // this.fr.result contiene los datos del fichero en un formato que se llama base64 que nos vale por que podemos usarlo para pintar una imagen en HTML
     const image = this.fr.result;

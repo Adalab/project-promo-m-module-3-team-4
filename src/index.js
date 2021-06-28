@@ -8,7 +8,7 @@ server.use(cors());
 server.use(express.json());
 server.use(express.json({ limit: "10mb" }));
 
-const serverPort = process.env.PORT || 4000;
+const serverPort = process.env.PORT || 3000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -41,7 +41,7 @@ server.get("/card/:id", (req, res) => {
 //   res.status(404).sendFile(notFoundFileAbsolutePath);
 // });
 
-server.post("/card/", (req, res) => {
+server.post("/card", (req, res) => {
   const response = {};
   console.log(req.body);
 
@@ -81,7 +81,7 @@ server.post("/card/", (req, res) => {
     );
 
     response.cardURL =
-      "https://awesome-profile-cards-onchange.herokuapp.com/card/" +
+      "https://hime-awesome-profile-cards.herokuapp.com/#/" +
       result.lastInsertRowid;
   }
   res.json({ response });
