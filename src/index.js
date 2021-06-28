@@ -32,18 +32,19 @@ server.get("/card/:id", (req, res) => {
   res.send(data);
 });
 
-server.get("*", (req, res) => {
-  const notFoundFileRelativePath = "../web/404-not-found.html";
-  const notFoundFileAbsolutePath = path.join(
-    __dirname,
-    notFoundFileRelativePath
-  );
-  res.status(404).sendFile(notFoundFileAbsolutePath);
-});
+// server.get("*", (req, res) => {
+//   const notFoundFileRelativePath = "../web/404-not-found.html";
+//   const notFoundFileAbsolutePath = path.join(
+//     __dirname,
+//     notFoundFileRelativePath
+//   );
+//   res.status(404).sendFile(notFoundFileAbsolutePath);
+// });
 
-server.post("/cardgenerator/", (req, res) => {
+server.post("/card/", (req, res) => {
   const response = {};
   console.log(req.body);
+
   if (req.body.name === undefined) {
     response.sucess = false;
     response.error = "Missing name parameter";
@@ -64,6 +65,24 @@ server.post("/cardgenerator/", (req, res) => {
     response.error = "Missing github parameter";
   } else {
     response.sucess = true;
-    response.cardURL = "mi_url_com";
+
+    const query = db.prepare(
+      `INSERT INTO card(palette, name, job, image, email, phone, linkedin, github) VALUES(?, ?, ?, ?, ?, ?, ?, ?)`
+    );
+    const result = query.run(
+      req.body.palette,
+      req.body.name,
+      req.body.job,
+      req.body.image,
+      req.body.email,
+      req.body.phone,
+      req.body.linkedin,
+      req.body.github
+    );
+
+    response.cardURL =
+      "https://awesome-profile-cards-onchange.herokuapp.com/card/" +
+      result.lastInsertRowid;
   }
+  res.json({ response });
 });

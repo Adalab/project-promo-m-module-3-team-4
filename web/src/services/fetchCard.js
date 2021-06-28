@@ -1,4 +1,4 @@
-const sendCard = "https://localhost:3000/cardgenerator";
+const sendCard = "/cardgenerator";
 
 const fetchCard = (data) => {
   return fetch(sendCard, {
