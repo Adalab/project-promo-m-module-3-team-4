@@ -25,7 +25,7 @@ function CardGenerator() {
     setImage(image);
     setData({
       ...data,
-      photo: image,
+      image: image,
     });
   };
 

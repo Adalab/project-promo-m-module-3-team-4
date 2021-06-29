@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const Database = require("better-sqlite3");
+const path = require("path");
 
 const server = express();
 
@@ -39,6 +40,7 @@ server.get("/cardgenerator/:id", (req, res) => {
 server.post("/cardgenerator", (req, res) => {
   const response = {};
 
+  console.log(req.body.name, req.body);
   if (req.body.name === undefined) {
     response.sucess = false;
     response.error = "Debes rellenar el campo Nombre Apellido";
@@ -83,11 +85,11 @@ server.post("/cardgenerator", (req, res) => {
   res.json({ response });
 });
 
-server.get("*", (req, res) => {
-  const notFoundFileRelativePath = "../web/404-not-found.html";
-  const notFoundFileAbsolutePath = path.join(
-    __dirname,
-    notFoundFileRelativePath
-  );
-  res.status(404).sendFile(notFoundFileAbsolutePath);
-});
+// server.get("*", (req, res) => {
+//   const notFoundFileRelativePath = "../web/404-not-found.html";
+//   const notFoundFileAbsolutePath = path.join(
+//     __dirname,
+//     notFoundFileRelativePath
+//   );
+//   res.status(404).sendFile(notFoundFileAbsolutePath);
+// });
