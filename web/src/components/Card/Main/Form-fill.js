@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Input from "./Input";
 
 function FormFill(props) {
-  console.log(props);
   return (
     <fieldset className="fill">
       <Collapsable title="Rellena" icon="far fa-keyboard">
@@ -77,7 +76,7 @@ function FormFill(props) {
             type="url"
             id="github"
             name="github"
-            placeholder="Ej: https://github.com/sally-hill"
+            placeholder="Ej: https://github.com/..."
           />
         </div>
       </Collapsable>

@@ -8,11 +8,8 @@ function FormShare(props) {
 
   const handleClick = (ev) => {
     ev.preventDefault();
-    console.log(props.data);
 
     fetchCard(props.data).then((data) => {
-      //setData(data);
-      console.log(data);
       if (data.success === false) {
         setCardError(data.error);
         setCardURL("");
@@ -44,9 +41,8 @@ function FormShare(props) {
           {cardURL !== "" ? (
             <div className="none card--created">
               <h3 className="none">La tarjeta ha sido creada:</h3>
-              <a className="js-url" href={cardURL}>
-                Link para acceder
-              </a>
+              <a className="js-url">{cardURL}</a>
+
               <a className="none share__button--twitter js-aTwitter">
                 Compartir en Twitter
               </a>

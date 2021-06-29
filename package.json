@@ -8,7 +8,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "react": "react-scripts build",
-    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public-react && mv ./web/build ./src/public-react"
+    "publish-react": "cd web && npm run build && cd .. && rm -rf ./src/public && mv ./web/build ./src/public"
   },
   "repository": {
     "type": "git",

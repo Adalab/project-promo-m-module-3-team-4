@@ -5,7 +5,6 @@ import "../../../stylesheets/core/_variables.scss";
 import "../../../stylesheets/layout/_form.scss";
 
 function Form(props) {
-  console.log(props);
   return (
     <form action="" method="POST" className="form js-form">
       <FormDesign

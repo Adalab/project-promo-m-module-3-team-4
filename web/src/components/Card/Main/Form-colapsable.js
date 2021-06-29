@@ -17,7 +17,6 @@ class Collapsable extends React.Component {
     });
   }
   render() {
-    console.log(this.state);
     const openClassName = this.state.isOpen ? "open" : "none";
 
     return (
