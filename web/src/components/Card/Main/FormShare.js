@@ -44,7 +44,9 @@ function FormShare(props) {
           {cardURL !== "" ? (
             <div className="none card--created">
               <h3 className="none">La tarjeta ha sido creada:</h3>
-              <a className="js-url">{cardURL}</a>
+              <a className="js-url" href={cardURL}>
+                Link para acceder
+              </a>
               <a className="none share__button--twitter js-aTwitter">
                 Compartir en Twitter
               </a>
