@@ -28,7 +28,12 @@ const db = new Database("./src/data/dataBase.db", { verbose: console.log });
 server.get("/cardgenerator/:id", (req, res) => {
   const query = db.prepare("SELECT * from card WHERE id = ?");
   const data = query.get(req.params.id);
-  res.send(data);
+
+  if (data) {
+    res.render("pages/card", data);
+  } else {
+    res.render("pages/card-not-found");
+  }
 });
 
 server.post("/cardgenerator", (req, res) => {
@@ -36,22 +41,22 @@ server.post("/cardgenerator", (req, res) => {
 
   if (req.body.name === undefined) {
     response.sucess = false;
-    response.error = "Missing name parameter";
+    response.error = "Debes rellenar el campo Nombre Apellido";
   } else if (req.body.job === undefined) {
     response.sucess = false;
-    response.error = "Missing job parameter";
+    response.error = "Debes rellenar el campo Puesto";
   } else if (req.body.image === undefined) {
     response.sucess = false;
-    response.error = "Missing image parameter";
+    response.error = "Debes subir una foto de perfil";
   } else if (req.body.email === undefined) {
     response.sucess = false;
-    response.error = "Missing email parameter";
+    response.error = "Debes introducir una dirección de email";
   } else if (req.body.linkedin === undefined) {
     response.sucess = false;
-    response.error = "Missing linkedin parameter";
+    response.error = "Debes introducir tu Linkedin";
   } else if (req.body.github === undefined) {
     response.sucess = false;
-    response.error = "Missing github parameter";
+    response.error = "Debes introducir tu GitHub";
   } else {
     const query = db.prepare(
       `INSERT INTO card(palette, name, job, image, email, phone, linkedin, github) VALUES(?, ?, ?, ?, ?, ?, ?, ?)`
@@ -78,11 +83,11 @@ server.post("/cardgenerator", (req, res) => {
   res.json({ response });
 });
 
-// server.get("*", (req, res) => {
-//   const notFoundFileRelativePath = "../web/404-not-found.html";
-//   const notFoundFileAbsolutePath = path.join(
-//     __dirname,
-//     notFoundFileRelativePath
-//   );
-//   res.status(404).sendFile(notFoundFileAbsolutePath);
-// });
+server.get("*", (req, res) => {
+  const notFoundFileRelativePath = "../web/404-not-found.html";
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
+  res.status(404).sendFile(notFoundFileAbsolutePath);
+});
