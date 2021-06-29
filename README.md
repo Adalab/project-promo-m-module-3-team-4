@@ -1,11 +1,11 @@
 # Final team project during the bootcamp at [Adalab](https://adalab.es/)
 
-##  Using React, we have refactored  the code of a functional website for making digital business cards, that was initially created with JavaScript.
+##  Using React, we have refactored the code of a functional website intended to produce digital business cards, that was initially created with JavaScript.
 
 
 The main idea of this project was to learn to `work with legacy code`, something that often happens in the programming world, developing our ability to modify code created by 
 others and making us aware of the importance of creating good code.  
-## Used Technologies ![]
+## Used Technologies:
 - Sass for styling.
 - ES6 and React for structuring the application JavaScript.
 - Git for version control, using branches.
