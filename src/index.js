@@ -40,7 +40,7 @@ server.get("/cardgenerator/:id", (req, res) => {
 server.post("/cardgenerator", (req, res) => {
   const response = {};
 
-  console.log(req.body.name, req.body);
+  // console.log(req.body.name, req.body);
   if (req.body.name === undefined) {
     response.sucess = false;
     response.error = "Debes rellenar el campo Nombre Apellido";
