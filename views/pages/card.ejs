@@ -23,57 +23,69 @@
 
   <body class="card">
     <section class="preview">
-        <div>
-            <Reset handleReset={props.handleReset} />
-            <div className={`container-profile__containercard js-palette2`}>
-              <div className="profile__name palette<%= palette %>">
-                <h2
-                  className={`container-profile__containercard__name js-nameProfile palette${props.palette}__color2`}
-                > <%= name %>
-                </h2>
-                <h3 className="container-profile__containercard__profesion js-rolProfile">
-                  <%= job %>
-                
-                </h3>
-              </div>
-    
-              <div
-              class="preview__card-image js__profile-image"
-              style="background-image: url('<%= image %>')" > 
-              </div>
-             
-              <div className="container-profile__containerrrss">
-                <a
-                  href="tel:<%= phone %>"
-                  target="_blank"
-                  className={`container-profile__containerrrss__rrss js-phone palette${props.palette}__circle`}
-                >
-                  <i className="fas fa-mobile-alt"></i>
-                </a>
-                <a
-                  href="email:<%= email %>"
-                  target="_blank"
-                  className={`container-profile__containerrrss__rrss js-mail palette${props.palette}__circle`}
-                >
-                  <i className="far fa-envelope"></i>
-                </a>
-                <a
-                  href="linkedin:<%= linkedin %>"
-                  target="_blank"
-                  className={`container-profile__containerrrss__rrss js-linkedin palette${props.palette}__circle`}
-                >
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="github:<%= github %>"
-                  target="_blank"
-                  className={`container-profile__containerrrss__rrss js-github palette${props.palette}__circle`}
-                >
-                  <i className="fab fa-github-alt"></i>
-                </a>
-              </div>
-            </div>
+      <div>
+        <!-- <Reset handleReset={props.handleReset} /> -->
+        <div className="container-profile__containercard js-palette2">
+          <div className="profile__name palette<%= palette %>">
+            <h2
+              className="container-profile__containercard__name
+              js-nameProfile
+              palette<%= palette %>__color2"
+            >
+              <%= name %>
+            </h2>
+            <h3
+              className="container-profile__containercard__profesion js-rolProfile"
+            >
+              <%= job %>
+            </h3>
           </div>
+
+          <div
+            class="preview__card-image js__profile-image"
+            style="background-image: url('<%= image %>')"
+          ></div>
+
+          <div className="container-profile__containerrrss">
+            <a
+              href="tel:<%= phone %>"
+              target="_blank"
+              className="container-profile__containerrrss__rrss
+              js-phone
+              palette<%= palette %>__circle"
+            >
+              <i className="fas fa-mobile-alt"></i>
+            </a>
+            <a
+              href="email:<%= email %>"
+              target="_blank"
+              className="container-profile__containerrrss__rrss
+              js-mail
+              palette<%= palette %>__circle"
+            >
+              <i className="far fa-envelope"></i>
+            </a>
+            <a
+              href="linkedin:<%= linkedin %>"
+              target="_blank"
+              className="container-profile__containerrrss__rrss
+              js-linkedin
+              palette<%= palette %>__circle"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="github:<%= github %>"
+              target="_blank"
+              className="container-profile__containerrrss__rrss
+              js-github
+              palette<%= palette %>__circle"
+            >
+              <i className="fab fa-github-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
