@@ -15,27 +15,43 @@
     />
     <title>Hi Me!</title>
     <link
-      href="/static/css/main.883a2663.chunk.css"
+      href="../../public/static/css/main.35532717.chunk.css"
       rel="stylesheet"
       type="text/css"
     />
   </head>
 
   <body class="card">
-    <section class="preview">
+    <section
+      class="container-profile"
+      style="
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: #a2deaf;
+      "
+    >
       <div>
         <!-- <Reset handleReset={props.handleReset} /> -->
-        <div className="container-profile__containercard js-palette2">
-          <div className="profile__name palette<%= palette %>">
+        <div class="container-profile__containercard js-palette2">
+          <div class="profile__name palette<%= palette %>">
             <h2
-              className="container-profile__containercard__name
-              js-nameProfile
-              palette<%= palette %>__color2"
+              class="
+                container-profile__containercard__name
+                js-nameProfile
+                palette<%=
+                palette
+                %>__color2
+              "
+              style="color: blue"
             >
               <%= name %>
             </h2>
             <h3
-              className="container-profile__containercard__profesion js-rolProfile"
+              class="container-profile__containercard__profesion js-rolProfile"
             >
               <%= job %>
             </h3>
@@ -43,45 +59,65 @@
 
           <div
             class="preview__card-image js__profile-image"
-            style="background-image: url('<%= image %>')"
+            style="
+              background-image: url('<%= image %>');
+              background-size: cover;
+              width: 150px;
+            "
           ></div>
 
-          <div className="container-profile__containerrrss">
+          <div class="container-profile__containerrrss">
             <a
               href="tel:<%= phone %>"
               target="_blank"
-              className="container-profile__containerrrss__rrss
-              js-phone
-              palette<%= palette %>__circle"
+              class="
+                container-profile__containerrrss__rrss
+                js-phone
+                palette<%=
+                palette
+                %>__circle
+              "
             >
-              <i className="fas fa-mobile-alt"></i>
+              <i class="fas fa-mobile-alt"></i>
             </a>
             <a
               href="email:<%= email %>"
               target="_blank"
-              className="container-profile__containerrrss__rrss
-              js-mail
-              palette<%= palette %>__circle"
+              class="
+                container-profile__containerrrss__rrss
+                js-mail
+                palette<%=
+                palette
+                %>__circle
+              "
             >
-              <i className="far fa-envelope"></i>
+              <i class="far fa-envelope"></i>
             </a>
             <a
               href="linkedin:<%= linkedin %>"
               target="_blank"
-              className="container-profile__containerrrss__rrss
-              js-linkedin
-              palette<%= palette %>__circle"
+              class="
+                container-profile__containerrrss__rrss
+                js-linkedin
+                palette<%=
+                palette
+                %>__circle
+              "
             >
-              <i className="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a
               href="github:<%= github %>"
               target="_blank"
-              className="container-profile__containerrrss__rrss
-              js-github
-              palette<%= palette %>__circle"
+              class="
+                container-profile__containerrrss__rrss
+                js-github
+                palette<%=
+                palette
+                %>__circle
+              "
             >
-              <i className="fab fa-github-alt"></i>
+              <i class="fab fa-github-alt"></i>
             </a>
           </div>
         </div>
