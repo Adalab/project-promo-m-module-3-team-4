@@ -37,7 +37,7 @@ function Landing() {
           title="comenzar a usar aplicación"
           className="main__button"
         >
-          comenzar
+          Comenzar
         </Link>
       </main>
       <Footer />

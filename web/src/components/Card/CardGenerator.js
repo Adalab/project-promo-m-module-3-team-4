@@ -2,20 +2,24 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { Preview } from "./Main/Preview";
 import { Form } from "./Main/Form";
-import { useState } from "react";
-
-//import Reset from "./Main/Reset";
+import { useState, useEffect } from "react";
+import ls from "../../services/localStorage";
 
 function CardGenerator() {
-  const [palettes, setPalettes] = useState("1");
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [image, setImage] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [github, setGithub] = useState("");
+  const localStorageData = ls.get("data") || {};
+  const [palettes, setPalettes] = useState(localStorageData.palette || "1");
+  const [name, setName] = useState(localStorageData.name || "");
+  const [job, setJob] = useState(localStorageData.job || "");
+  const [image, setImage] = useState(localStorageData.image || "");
+  const [email, setEmail] = useState(localStorageData.email || "");
+  const [phone, setPhone] = useState(localStorageData.phone || "");
+  const [linkedin, setLinkedin] = useState(localStorageData.linkedin || "");
+  const [github, setGithub] = useState(localStorageData.github || "");
   const [data, setData] = useState({});
+
+  useEffect(() => {
+    ls.set("data", data);
+  }, [data]);
 
   const updateAvatar = (image) => {
     setImage(image);
@@ -86,17 +90,6 @@ function CardGenerator() {
           updateAvatar={updateAvatar}
           data={data}
         />
-
-        {/* <div className="tooltipFill js-tooltipFill none">
-        <p className="tooltipParagraph">
-          No tengas tanta prisa. Primero rellena la sección anterior
-        </p>
-      </div>
-      <div className="tooltipShare js-tooltipShare none">
-        <p className="tooltipParagraph">
-          Recuerda! Rellena los campos ¿Has rellenado el campo de la foto?
-        </p>
-      </div> */}
       </div>
       <Footer />
     </div>

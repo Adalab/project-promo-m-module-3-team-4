@@ -1,4 +1,4 @@
-const sendCard = "/cardgenerator";
+const sendCard = "/cardgenerator/";
 
 const fetchCard = (data) => {
   console.log(data);
@@ -8,11 +8,7 @@ const fetchCard = (data) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      return data;
-    });
+  }).then((response) => response.json());
 };
 
 export { fetchCard };

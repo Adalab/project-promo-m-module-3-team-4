@@ -19,7 +19,7 @@ class Collapsable extends React.Component {
   render() {
     console.log(this.state);
     const openClassName = this.state.isOpen ? "open" : "none";
-    // const openText = this.state.isOpen ? "Abierto" : "Cerrado";
+
     return (
       <>
         <div className="fieldset__button" onClick={this.handleClick}>

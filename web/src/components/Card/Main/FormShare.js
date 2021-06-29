@@ -8,7 +8,7 @@ function FormShare(props) {
 
   const handleClick = (ev) => {
     ev.preventDefault();
-    console.log(props.data);
+    //console.log(props.data);
 
     fetchCard(props.data).then((data) => {
       //setData(data);

@@ -21,9 +21,6 @@ function FormFill(props) {
               placeholder="Ej: Sally Jill"
               maxLength="19"
             />
-            {/* <p className="js-validationName validationMessage none">
-              El campo no se ha rellenado
-            </p> */}
 
             <Input
               value={props.job}
@@ -36,25 +33,8 @@ function FormFill(props) {
               placeholder="Ej: Front- end unicorn"
               maxLength="22"
             />
-            {/* <p className="js-validationJob validationMessage none">
-             El campo no se ha rellenado
-            </p> */}
           </div>
           <GetAvatar image={props.image} updateAvatar={props.updateAvatar} />
-          {/*
-            <button className="js__profile-trigger">Añadir imagen</button>
-            <p className="js-validationPhoto validationMessage none">
-              No se ha adjuntado ningún archivo
-            </p>
-            <p className="js-validationPhotoTwo validationMessage none">
-              La extensión no es válida. Prueba con un archivo .jpg, .png,
-              .jpeg, .gif, .svg
-            </p>
-            <p className="js-validationPhotoThree validationMessage none">
-              El tamaño de la foto es excesivo. Prueba con un archivo de menos
-              de 4 MG
-            </p>
-          </div> */}
 
           <Input
             value={props.email}
@@ -66,9 +46,6 @@ function FormFill(props) {
             name="email"
             placeholder="Ej: sally-hill@gmail.com"
           />
-          {/* <p className="js-validationEmail validationMessage none">
-              El campo no se ha rellenado o el formato es inválido
-            </p> */}
 
           <Input
             value={props.phone}
@@ -80,9 +57,6 @@ function FormFill(props) {
             name="phone"
             placeholder="Ej: 555-55-55-55"
           />
-          {/* <p className="js-validationPhone validationMessage none">
-              El campo no se ha rellenado o el formato es inválido
-            </p> */}
 
           <Input
             value={props.linkedin}
@@ -94,9 +68,6 @@ function FormFill(props) {
             name="linkedin"
             placeholder="Ej: https://www.linkedin.com/in/..."
           />
-          {/* <p className="js-validationLinkedin validationMessage none">
-              El campo no se ha rellenado
-            </p> */}
 
           <Input
             value={props.github}
@@ -108,10 +79,6 @@ function FormFill(props) {
             name="github"
             placeholder="Ej: https://github.com/sally-hill"
           />
-
-          {/* <p className="js-validationGithub validationMessage none">
-              El campo no se ha rellenado
-            </p> */}
         </div>
       </Collapsable>
     </fieldset>
