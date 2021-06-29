@@ -19,6 +19,7 @@ function FormShare(props) {
       } else {
         setCardError("");
         setCardURL(data.cardURL);
+        console.log(data.cardURL);
       }
     });
   };

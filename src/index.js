@@ -82,7 +82,7 @@ server.post("/cardgenerator", (req, res) => {
       //result.lastInsertRowid;
     }
   }
-  res.json({ response });
+  res.json(response);
 });
 
 // server.get("*", (req, res) => {
