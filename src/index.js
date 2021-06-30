@@ -85,11 +85,11 @@ server.post("/cardgenerator", (req, res) => {
   res.json(response);
 });
 
-// server.get("*", (req, res) => {
-//   const notFoundFileRelativePath = "../web/404-not-found.html";
-//   const notFoundFileAbsolutePath = path.join(
-//     __dirname,
-//     notFoundFileRelativePath
-//   );
-//   res.status(404).sendFile(notFoundFileAbsolutePath);
-// });
+server.get("*", (req, res) => {
+  const notFoundFileRelativePath = "../web/404-not-found.html";
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
+  res.status(404).sendFile(notFoundFileAbsolutePath);
+});
