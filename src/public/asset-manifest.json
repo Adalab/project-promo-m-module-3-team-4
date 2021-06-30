@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.35532717.chunk.css",
+    "main.js": "./static/js/main.ae6a3351.chunk.js",
+    "main.js.map": "./static/js/main.ae6a3351.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.f8163d08.js",
+    "runtime-main.js.map": "./static/js/runtime-main.f8163d08.js.map",
+    "static/js/2.31c57c71.chunk.js": "./static/js/2.31c57c71.chunk.js",
+    "static/js/2.31c57c71.chunk.js.map": "./static/js/2.31c57c71.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.35532717.chunk.css.map": "./static/css/main.35532717.chunk.css.map",
+    "static/js/2.31c57c71.chunk.js.LICENSE.txt": "./static/js/2.31c57c71.chunk.js.LICENSE.txt",
+    "static/media/hi-me-logo.68758742.png": "./static/media/hi-me-logo.68758742.png",
+    "static/media/img-default.a4a7957c.jpg": "./static/media/img-default.a4a7957c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8163d08.js",
+    "static/js/2.31c57c71.chunk.js",
+    "static/css/main.35532717.chunk.css",
+    "static/js/main.ae6a3351.chunk.js"
+  ]
+}
