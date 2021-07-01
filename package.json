@@ -1,5 +1,6 @@
 {
   "name": "project-server",
+  "homepage": "./",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,7 +20,6 @@
   "bugs": {
     "url": "https://github.com/Adalab/project-promo-m-module-3-team-4/issues"
   },
-  "homepage": "https://github.com/Adalab/project-promo-m-module-3-team-4#readme",
   "dependencies": {
     "better-sqlite3": "^7.4.1",
     "cors": "^2.8.5",
